@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let nota = parseFloat(prompt("Introduce una nota: "));
+
+
+        if((nota>=0) && (nota<=10)){
+
+            if((nota>=5) && (nota<=10)){
+                document.write("¡Has aprobado con un " + nota + "!");
+            }else{
+                document.write("¡Has suspendido con un " + nota + "!");
+
+                // A través de localStorage creo la variable nota1 con el valor de la variable nota.
+                localStorage.setItem("nota1", nota);
+                window.open("recuperacion.html", "_blank", "width=500,height=500,toolbar=no , status=yes,menubar=no,");
+            }
+
+        }else{
+            document.write("La nota introducida no es correcta, debes introducir una nota entre el 0 y el 10");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="nota"></p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim laborum facilis autem. Esse dignissimos dolor ea eveniet eaque illo harum distinctio at aut soluta voluptates, architecto sunt, modi quam possimus!</p>
+    <button onclick="window.close()">Cerrar</button>
+
+    <script>
+
+        // Creamos una variable llamada nota 2 para darle el valor de la variable nota de la ventana principal.
+        let nota2 = localStorage.getItem("nota1");
+
+        // con el innerHTML conseguimos escribir dentro del parrafo donde tenemos id="nota".
+        document.getElementById("nota").innerHTML += "Has sacado un: " + nota2;
+
+    </script>
+    
+</body>
+</html>
